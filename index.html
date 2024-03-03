@@ -8,6 +8,52 @@
         </title>
     </head>
     <body>
-        <p>Esta pagina esta em desenvolvimento</p>
+        <div class="pop-up" id="pop-up">
+            <p>Sure to reset sounds?</p>
+            <div class="pop-up-buttons">
+                <button onclick="resetYes()">yes</button>
+                <button onclick="resetNo()">no</button>
+            </div>
+        </div>
+        <div id="sound-list">
+        </div>
+        <div class="all">
+            <div class="sidebar" id="sidebar">
+                <div class="slider-w-txt">
+                    <p>
+                        Chance per time: <span class="cpt-value">0</span>%
+                    </p>
+                    <input type="range" min="0" max="100" value="0" id="cpt-slider" class="slider">
+                </div>
+                <div class="slider-w-txt">
+                    <p>
+                        Seconds in a time: <span class="sit-value">60</span>s
+                    </p>
+                    <input type="range" min="1" max="60" value="60" id="sit-slider" class="slider">
+                </div>
+                <div class="slider-w-txt">
+                    <p>
+                        Volume: <span class="volume-value">100</span>%
+                    </p>
+                    <input type="range" min="0" max="100" value="100" id="volume-slider" class="slider">
+                </div>
+                <p>
+                    Evry <span class="sit-value">60</span> seconds the site will try to play a random sound with a <span class="cpt-value">0</span>% chance.
+                </p>
+                <button onclick="playRandomSound()">Test sound</button>
+                <div class="file-input-container"><input type="file" id="sound-file-input" accept="audio/*"></div>
+                <!---->
+            </div>
+            <div>
+                <div class="htr-title">
+                    <p>History</p>
+                    <button onclick="reset()" class="reset-button">RESET</button>
+                </div>
+                <div id="htr-text" class="htr-text">
+                    <p class="htr-info">Aqui ira ficar seu historico.</p>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
     </body>
 </html>
